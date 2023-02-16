@@ -169,4 +169,17 @@ FROM Employees e1 INNER JOIN Employees e2 on e1.Title = e2.Title
 WHERE e1.EmployeeID <> e2.EmployeeID
 
 --26
+SELECT manager.EmployeeID AS ManagerID, COUNT(emp.EmployeeID) AS Num_emp
+FROM Employees manager INNER JOIN Employees emp ON emp.ReportsTo = manager.EmployeeID
+GROUP BY manager.EmployeeID
+HAVING COUNT(emp.EmployeeID) > 2
 
+
+--27
+SELECT *
+FROM (SELECT c.City, c.CompanyName, c.ContactName, 'Customer' AS Type
+FROM Customers c
+UNION
+SELECT s.City, s.CompanyName, s.ContactName, 'Supplier' AS Type
+FROM Suppliers s) dt
+ORDER BY dt.City
