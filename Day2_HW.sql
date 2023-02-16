@@ -158,3 +158,15 @@ FROM Shippers shi CROSS JOIN Suppliers sup
 
 
 --24
+
+SELECT o.OrderDate, p.ProductName
+FROM ORDERS o INNER JOIN [Order Details] od ON o.OrderID = od.OrderID INNER JOIN Products p ON p.ProductID = od.ProductID
+
+--25
+
+SELECT e1.FirstName + ' ' + e1.LastName AS Employee1, e2.FirstName + ' ' + e2.LastName As Employee2
+FROM Employees e1 INNER JOIN Employees e2 on e1.Title = e2.Title
+WHERE e1.EmployeeID <> e2.EmployeeID
+
+--26
+
