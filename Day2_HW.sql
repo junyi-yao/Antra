@@ -112,3 +112,49 @@ FROM (SELECT o.ShipPostalCode as Zipcode, COUNT(o.OrderID) as Amount_Sold
 	GROUP BY o.ShipPostalCode) dt
 ORDER BY dt.Amount_Sold DESC
 
+
+--17
+SELECT c.City, COUNT(c.CustomerID) AS Number_Customers
+FROM dbo.Customers c
+GROUP BY c.City
+
+--18
+SELECT c.City, COUNT(c.CustomerID) AS Number_Customers
+FROM dbo.Customers c
+GROUP BY c.City
+HAVING COUNT(c.CustomerID) > 2
+
+
+--19
+SELECT c.ContactName AS Customer_Name, o.OrderDate AS Order_Date
+FROM dbo.Orders o INNER JOIN dbo.Customers c on o.CustomerID = c.CustomerID
+WHERE o.OrderDate > '1998-01-01 00:00:00.000'
+ORDER BY Customer_Name
+
+
+--20
+SELECT c.ContactName AS Customer_Name, MAX(o.OrderDate) AS Order_Date
+FROM dbo.Orders o INNER JOIN dbo.Customers c on o.CustomerID = c.CustomerID
+WHERE o.OrderDate > '1998-01-01 00:00:00.000'
+GROUP BY c.ContactName
+
+--21
+
+SELECT c.ContactName as Customer_Name, COUNT(od.ProductID) as Number_Prodeucts_Bought
+FROM Customers c INNER JOIN Orders o on c.CustomerID = o.CustomerID INNER JOIN [Order Details] od on od.OrderID = o.OrderID
+GROUP BY c.ContactName
+
+
+--22
+SELECT c.CustomerID, COUNT(od.ProductID) as Number_Prodeucts_Bought
+FROM Customers c INNER JOIN Orders o on c.CustomerID = o.CustomerID INNER JOIN [Order Details] od on od.OrderID = o.OrderID
+GROUP BY c.CustomerID
+HAVING COUNT(od.ProductID) > 100
+
+
+--23
+SELECT sup.CompanyName AS [Supplier Company Name], shi.CompanyName AS [Shipping Company Name]
+FROM Shippers shi CROSS JOIN Suppliers sup
+
+
+--24
