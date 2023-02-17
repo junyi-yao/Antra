@@ -72,3 +72,59 @@ WHERE c.City in
 
 
 
+--6
+SELECT c.City, COUNT(DISTINCT od.ProductID) AS Kind_of_Products
+FROM Customers c INNER JOIN Orders o on o.CustomerID = c.CustomerID INNER JOIN [Order Details] od on o.OrderID = od.OrderID
+GROUP BY c.City
+HAVING COUNT(DISTINCT od.ProductID) > 2
+
+
+
+
+--7
+SELECT DISTINCT c.CompanyName
+FROM Customers c INNER JOIN Orders o on c.CustomerID = o.CustomerID
+WHERE c.City <> o.ShipCity
+
+
+--8
+(SELECT TOP 5 p.ProductID
+FROM [Order Details] od INNER JOIN Products p on od.ProductID = p.ProductID
+GROUP BY p.ProductID
+ORDER BY SUM(od.Quantity) DESC) 
+
+SELECT od.ProductID, od.UnitPrice*(1 - od.Discount) AS Actual_Price
+FROM [Order Details] od
+WHERE od.ProductID IN 
+(SELECT TOP 5 p.ProductID
+FROM [Order Details] od INNER JOIN Products p on od.ProductID = p.ProductID
+GROUP BY p.ProductID
+ORDER BY SUM(od.Quantity) DESC) 
+
+
+(SELECT Price_table.ProductID, AVG(Price_table.Actual_Price) AS Average_price
+FROM 
+(
+SELECT od.ProductID, od.UnitPrice*(1 - od.Discount) AS Actual_Price
+FROM [Order Details] od
+WHERE od.ProductID IN 
+(SELECT TOP 5 p.ProductID
+FROM [Order Details] od INNER JOIN Products p on od.ProductID = p.ProductID
+GROUP BY p.ProductID
+ORDER BY SUM(od.Quantity) DESC) 
+
+) Price_table
+GROUP BY Price_table.ProductID) Product_AVG_Price
+
+
+SELECT dt.ProductID, dt.ShipCity, dt.Total, RANK() OVER (PARTITION BY c.Country ORDER BY COUNT(o.OrderID) DESC) RNK
+FROM (SELECT od.ProductID, o.ShipCity, SUM(od.Quantity) Total
+FROM Orders o INNER JOIN [Order Details] od ON o.OrderID = od.OrderID
+WHERE od.ProductID in 
+(SELECT TOP 5 p.ProductID
+FROM [Order Details] od INNER JOIN Products p on od.ProductID = p.ProductID
+GROUP BY p.ProductID
+ORDER BY SUM(od.Quantity) DESC) 
+GROUP BY od.ProductID,o.ShipCity
+) dt
+ORDER BY dt.ProductID, dt.Total DESC
