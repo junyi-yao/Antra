@@ -128,3 +128,8 @@ ORDER BY SUM(od.Quantity) DESC)
 GROUP BY od.ProductID,o.ShipCity
 ) dt
 ORDER BY dt.ProductID, dt.Total DESC
+
+
+
+--9
+SELECT 
