@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\day5_C#\\ConsoleApp1\\ConsoleApp1\\01TestYourKnowledge.csproj",
+      "projectUniqueName": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\C#_1\\ConsoleApp1\\ConsoleApp1\\01TestYourKnowledge.csproj",
       "projectName": "01TestYourKnowledge",
-      "projectPath": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\day5_C#\\ConsoleApp1\\ConsoleApp1\\01TestYourKnowledge.csproj",
+      "projectPath": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\C#_1\\ConsoleApp1\\ConsoleApp1\\01TestYourKnowledge.csproj",
       "packagesPath": "C:\\Users\\junyi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\day5_C#\\ConsoleApp1\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\C#_1\\ConsoleApp1\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\junyi\\AppData\\Roaming\\NuGet\\NuGet.Config",

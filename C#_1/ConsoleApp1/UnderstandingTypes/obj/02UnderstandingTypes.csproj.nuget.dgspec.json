@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\day5_C#\\ConsoleApp1\\ConsoleApp2\\02UnderstandingTypes.csproj": {}
+    "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\C#_1\\ConsoleApp1\\ConsoleApp2\\02UnderstandingTypes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\day5_C#\\ConsoleApp1\\ConsoleApp2\\02UnderstandingTypes.csproj": {
+    "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\C#_1\\ConsoleApp1\\ConsoleApp2\\02UnderstandingTypes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\day5_C#\\ConsoleApp1\\ConsoleApp2\\02UnderstandingTypes.csproj",
+        "projectUniqueName": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\C#_1\\ConsoleApp1\\ConsoleApp2\\02UnderstandingTypes.csproj",
         "projectName": "02UnderstandingTypes",
-        "projectPath": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\day5_C#\\ConsoleApp1\\ConsoleApp2\\02UnderstandingTypes.csproj",
+        "projectPath": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\C#_1\\ConsoleApp1\\ConsoleApp2\\02UnderstandingTypes.csproj",
         "packagesPath": "C:\\Users\\junyi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\day5_C#\\ConsoleApp1\\ConsoleApp2\\obj\\",
+        "outputPath": "C:\\Users\\junyi\\OneDrive\\Desktop\\ICC\\Antra\\Github\\C#_1\\ConsoleApp1\\ConsoleApp2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\junyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
