@@ -9,6 +9,3 @@ int min_of_sbyte = (int)sbyte.MinValue;
 Console.WriteLine($"The size of sbyte is: {size_of_sbyte}, " +
     $"the max value of sbyte is {max_of_sbyte}," +
     $"the min value of sbyte is {min_of_sbyte}");
-
-
-
